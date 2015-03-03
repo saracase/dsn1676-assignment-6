@@ -1,6 +1,8 @@
 var $btnShow = $('.btn-show-hide');
 var $btnMove = $('.btn-move');
 var $btnCollapse = $('.btn-collapse-expand');
+var $btnBounce = $('.btn-bounce');
+var $circle = $('.circle');
 var $box = $('.box');
 var $panel = $('.panel');
 var $diamond = $('.diamond');
@@ -15,4 +17,12 @@ $btnMove.on('click', function () {
 
 $btnCollapse.on('click', function () {
     $panel.toggleClass('js-panel-collapse');
+});
+
+$btnBounce.on('click', function () {
+    $circle.addClass('js-circle-bounce');
+});
+
+$circle.on('animationend', function () {
+    $circle.removeClass('js-circle-bounce');
 });

@@ -89,7 +89,42 @@ div {
   width: 100px;
 
   background-color: orange;
+  right: 1em;
 }
+
+.js-circle-bounce {
+    animation: circle-bounce 1s;
+}
+
+@keyframes circle-bounce {
+    0% {
+        top: 0.5em;
+        right: 2em; 
+    }
+    20% {
+        top: 2.5em;
+        right: 4em; 
+    }
+    40% {
+        top: 1em;
+        right: 6em; 
+    }
+    60% {
+        top: 2em;
+        right: 6em; 
+    }
+    
+    80% {
+        top: 2em;
+        right: 6em; 
+    }
+    
+    100% {
+        top: 1em;
+        right: 4em; 
+    }
+
+
 
 .list {
   bottom: 1em;
