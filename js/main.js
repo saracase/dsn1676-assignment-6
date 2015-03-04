@@ -26,20 +26,16 @@ $btnBounce.on('click', function () {
     $circle.addClass('js-circle-bounce');
 });
 
-$circle.on('animationend', function () {
+$circle.on('webkitAnimationEnd animationend', function () {
     $circle.removeClass('js-circle-bounce');
 });
-    
-    $li.append();
-    $list.append($li);
-    
-    $li.addClass('list-item');
-    
-    $del.on('click', function () {
-        $li.remove();
-    });
-});
 
-$list.on('click', 'li', function () {
-    $(this).toggleClass('');
+$btnAppend.on('click', function () {
+    var $li = $('<li>');
+    var $listItem = $('<p>').html('New List Item');
+    
+    $list.append($li);
+    $li.append($listItem);
+    
+    $li.addClass('js-li-push');
 });
